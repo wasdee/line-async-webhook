@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "line-async-webhook"
+version = "0.1.0"
+description = ""
+authors = ["Nutchanon Ninyawee <nutchanon@codustry.com>"]
+readme = "README.md"
+packages = [{include = "line_async_webhook"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+line-bot-sdk = "^2.4.2"
+asyncer = "^0.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
