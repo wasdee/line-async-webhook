@@ -43,6 +43,19 @@ class AsyncWebhookHandler(WebhookHandler):
                     else:
                         self.__invoke_func(func, event, payload)
 
+    def __add_handler(self, func, event, message=None):
+        return super().__add_handler(func, event, message)
+
+    def add_handler(self, func, event, message=None):
+        if isinstance(message, (list, tuple)):
+            for it in message:
+                self.__add_handler(func, event, message=it)
+        else:
+            self.__add_handler(func, event, message=message)
+
+    @classmethod
+    def __invoke_func(cls, func, event, payload):
+        super().__invoke_func(func, event, payload)
 
     @classmethod
     async def __invoke_func_async(cls, func, event, payload):
