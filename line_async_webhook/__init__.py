@@ -58,3 +58,10 @@ class AsyncWebhookHandler(WebhookHandler):
 
         await function_return
 
+    @staticmethod
+    def __get_args_count(func):
+        return WebhookHandler.__get_args_count(func)
+
+    @staticmethod
+    def __get_handler_key(event, message=None):
+        return WebhookHandler.__get_handler_key(event, message)
