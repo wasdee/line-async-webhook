@@ -106,7 +106,7 @@ async def handle_async(self, body, signature):
                 func = self._default
 
             if func is None:
-                logger.info('No handler of ' + key + ' and no default handler')
+                LOGGER.info('No handler of ' + key + ' and no default handler')
             else:
                 if inspect.iscoroutinefunction(func):
                     task_group.soonify(self.__invoke_func_async)(func, event, payload)
