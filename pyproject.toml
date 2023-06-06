@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "line-async-webhook"
-version = "1.0.0"
+version = "1.0.1"
 description = ""
 authors = ["Nutchanon Ninyawee <nutchanon@codustry.com>"]
 readme = "README.md"
